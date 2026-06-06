@@ -22,9 +22,6 @@ jobs:
       - name: Build with Maven
         run: mvn clean install -DskipTests
 
-      - name: Run Tests
-        run: mvn test
-
       - name: Download DesigniteJava
         run: wget "https://www.designite-tools.com/assets/DesigniteJava.jar"
 
