@@ -22,6 +22,12 @@ jobs:
       - name: Build with Maven
         run: mvn clean install -DskipTests
 
+      - name: Set up JDK 22 for DesigniteJava
+        uses: actions/setup-java@v3
+        with:
+          java-version: '22'
+          distribution: 'temurin'
+
       - name: Download DesigniteJava
         run: wget "https://www.designite-tools.com/assets/DesigniteJava.jar"
 
